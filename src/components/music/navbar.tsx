@@ -24,7 +24,23 @@ const Navbar = (): JSX.Element => {
                     placeholder="Search..."
                     onBlur={handleSearch} /> :
                 <i className="fa fa-search" onClick={handleSearch} />}
-            <i className="fa fa-bell" onClick={handleNotiClick} />
+            <div className="position-relative">
+                <i className="fa fa-bell fa-lg" onClick={handleNotiClick} />
+                <div style={{
+                    backgroundColor: "red",
+                    width: 12,
+                    aspectRatio: 1,
+                    borderRadius: "100%",
+                    position: "absolute",
+                    top: 2,
+                    right: -5,
+                    fontSize: 8,
+                    textAlign: "center",
+                    color: "#ffffff"
+                }}>
+                    5
+                </div>
+            </div>
             {showNotiMenu && <NotificationPopupMenu />}
         </div>
     );

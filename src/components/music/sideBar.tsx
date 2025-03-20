@@ -65,7 +65,7 @@ const SideBar = (props: sideBarProps): JSX.Element => {
                     fontWeight={600}
                     style={{ opacity: collapsed ? 0 : 0.7, letterSpacing: '0.5px' }}
                 >
-                    YOUR PLAYLISTS
+                    YOUR PLAYLISTS <i className="fa fa-plus-circle ms-3"/>
                 </Typography>
                 <Menu>
                     {recommendedAlbumList?.map(
