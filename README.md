@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Libraries
+- Bootstrap 5.3.3
+- FontAwesome 6.7.2
+- Material UI
+- react-pro-sidebar
+- react-h5-audio-player
+- sass
+  
 ## Available Scripts
 
 In the project directory, you can run:
