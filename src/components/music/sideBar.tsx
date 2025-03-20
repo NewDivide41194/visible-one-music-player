@@ -3,6 +3,7 @@ import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 
 import UserImage from "../../assets/images/user.jpg";
 import { Typography } from "@mui/material";
+import ProfilePopupMenu from "./profilePopupMenu";
 
 interface sideBarProps {
     recommendedAlbumList: any
@@ -10,7 +11,8 @@ interface sideBarProps {
 
 const SideBar = (props: sideBarProps): JSX.Element => {
     const { recommendedAlbumList } = props;
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState<boolean>(false);
+    const [showProfileMenu, setShowProfileMenu] = useState<boolean>(false)
 
     return (
         <div
@@ -30,15 +32,13 @@ const SideBar = (props: sideBarProps): JSX.Element => {
                             onClick={() => setCollapsed(!collapsed)}
                         />
                     }>
-                        <div>
+                        <div className="position-relative" style={{position:"relative"}} onClick={() => setShowProfileMenu(!showProfileMenu)} >
                             <b className="me-4">
                                 Joshua
                             </b>
-                            <i className="fa fa-caret-down"
-                            />
-
-
+                            <i className="fa fa-caret-down" />
                         </div>
+                        {showProfileMenu && <ProfilePopupMenu />}
                     </MenuItem>
                 </Menu>
                 <Typography
